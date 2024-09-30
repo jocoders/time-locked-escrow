@@ -1,66 +1,59 @@
-## Foundry
+# TimeLockedEscrow
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
 
-Foundry consists of:
+`TimeLockedEscrow` is a smart contract implemented on Ethereum that allows a buyer to deposit ERC20 tokens, which a seller can withdraw after a 3-day timelock. This contract is designed to facilitate secure and trustless transactions between two parties.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+- **ERC-20 Compliance**: The contract is compatible with any standard ERC-20 token.
+- **Timelock**: Ensures that the tokens can only be withdrawn by the seller after a 3-day period.
+- **Security**: Implements `ReentrancyGuard` to prevent reentrancy attacks and uses `SafeERC20` for safe token transfers.
 
-https://book.getfoundry.sh/
+## Technology
 
-## Usage
+The contract is implemented using Solidity 0.8.20 and relies on OpenZeppelin's contracts for enhanced security and standard functionality.
 
-### Build
+## Getting Started
 
-```shell
-$ forge build
+### Prerequisites
+
+- Node.js and npm
+- Foundry (for local deployment and testing)
+
+### Installation
+
+1. Install Foundry if it's not already installed:
+
+   ```bash
+   curl -L https://foundry.paradigm.xyz | bash
+   foundryup
+   ```
+
+2. Clone the repository:
+
+   ```bash
+   git clone https://github.com/jocoders/time-locked-escrow-token.git
+   cd blacklist-token
+   ```
+
+3. Install dependencies:
+   ```bash
+   forge install
+   ```
+
+### Testing
+
+Run tests using Foundry:
+
+```bash
+forge test
 ```
 
-### Test
+## Contributing
 
-```shell
-$ forge test
-```
+Contributions are welcome! Please fork the repository and open a pull request with your features or fixes.
 
-### Format
+## License
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project is unlicensed and free for use by anyone.
