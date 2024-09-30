@@ -33,7 +33,7 @@ The contract is implemented using Solidity 0.8.20 and relies on OpenZeppelin's c
 2. Clone the repository:
 
    ```bash
-   git clone https://github.com/jocoders/time-locked-escrow-token.git
+   git clone https://github.com/jocoders/time-locked-escrow.git
    cd time-locked-escrow
    ```
 
