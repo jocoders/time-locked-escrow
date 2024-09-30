@@ -34,7 +34,7 @@ The contract is implemented using Solidity 0.8.20 and relies on OpenZeppelin's c
 
    ```bash
    git clone https://github.com/jocoders/time-locked-escrow-token.git
-   cd blacklist-token
+   cd time-locked-escrow
    ```
 
 3. Install dependencies:
